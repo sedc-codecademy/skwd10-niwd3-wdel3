@@ -1,0 +1,12 @@
+@function textColor($textcolor) {
+  @if (lightness($textcolor) > 50) {
+    @return darken($textcolor, 60%);
+  } @else {
+    @return lighten($textcolor, 60%);
+  }
+}
+
+@mixin font($fontSize, $fontWeight) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+}
