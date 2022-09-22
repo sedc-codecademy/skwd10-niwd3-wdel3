@@ -73,11 +73,29 @@ header {
     background-color: rgb(119, 119, 243);
     color: textColor($font-color-2);
 
-    @include font(20px, bold);
+    // Inherit with mixin :)
+    @include font(20px, bold, blue);
+    // Inherit/extend with %
+    @extend %card;
   }
 
   &-two {
     color: textColor(red);
-    @include font(50px, bolder);
+    @include font(50px, bolder, yellow);
+    @extend %card;
+  }
+}
+
+// BEM
+
+.section {
+  &__msg {
+    font-size: 2rem;
+    &--error {
+      color: red;
+    }
+    &--success {
+      color: green;
+    }
   }
 }

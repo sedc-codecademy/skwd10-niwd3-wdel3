@@ -1,3 +1,6 @@
+.container-one, .container-two {
+  width: 50%; }
+
 body {
   background-color: #a79999; }
 
@@ -33,8 +36,17 @@ header {
     background-color: #7777f3;
     color: rgba(18, 30, 1, 0.82);
     font-size: 20px;
-    font-weight: bold; }
+    font-weight: bold;
+    color: blue; }
   .container-two {
     color: white;
     font-size: 50px;
-    font-weight: bolder; }
+    font-weight: bolder;
+    color: yellow; }
+
+.section__msg {
+  font-size: 2rem; }
+  .section__msg--error {
+    color: red; }
+  .section__msg--success {
+    color: green; }
