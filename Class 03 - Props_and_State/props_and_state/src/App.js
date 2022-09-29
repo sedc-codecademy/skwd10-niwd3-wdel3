@@ -1,6 +1,7 @@
 import "./App.css";
 import Counter from "./components/counter/Counter";
 import Movies from "./components/movies/Movies";
+import Products from "./components/products/Products";
 import ShoppingCart from "./components/shopping-cart/ShoppingCart";
 import ShoppingList from "./components/shopping-list/ShoppingList";
 
@@ -33,6 +34,12 @@ function App() {
       <Counter />
       <hr />
       <Movies />
+
+      <hr />
+      <br />
+      <h1>Functional component state menagement {":)"}</h1>
+
+      <Products />
     </div>
   );
 }

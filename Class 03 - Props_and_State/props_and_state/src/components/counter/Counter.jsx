@@ -5,7 +5,7 @@ class Counter extends Component {
     super(props);
 
     this.state = {
-      numberToChange: 0,
+      numberToChange: -1,
     };
 
     // Solution two, if method is not declared with arrow function
@@ -32,9 +32,16 @@ class Counter extends Component {
     // });
 
     // Syntax #2, so we can extract prevState
-    this.setState((prevState) => ({
-      //prettier-ignore
-      numberToChange: prevState.numberToChange === 0 ? this.state.numberToChange : (this.state.numberToChange -= 1),
+    // this.setState((prevState) => ({
+    //   //prettier-ignore
+    //   numberToChange: prevState.numberToChange === 0 ? this.state.numberToChange : (this.state.numberToChange -= 1),
+    // }));
+
+    this.setState((state) => ({
+      numberToChange:
+        state.numberToChange <= 0
+          ? this.state.numberToChange
+          : (this.state.numberToChange -= 1),
     }));
   }
 
@@ -50,6 +57,7 @@ class Counter extends Component {
         <button onClick={this.incrementNumber}>Increment number</button>
         {/* <button onClick={() => this.incrementNumber()}>Increment number</button> */}
         <button onClick={this.decrementNumber}>Decrement number</button>
+
         {/* Solution one */}
         {/* <button onClick={() => this.decrementNumber()}>Decrement number</button> */}
       </div>
