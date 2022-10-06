@@ -38,8 +38,8 @@ class App extends React.Component {
       <div className="App">
         {/* #1 Lifecycle methods basic demo code */}
         {/* <LifeCycleComponent
-          products={basket}
-          handleAddNewProduct={handleAddNewProduct}
+          products={this.state.basket}
+          handleAddNewProduct={this.handleAddNewProduct}
         /> */}
 
         {/* #2 PRACTICAL DEMO EXAMPLE OF USING LS METHODS IN CLASS COMPONENTS*/}

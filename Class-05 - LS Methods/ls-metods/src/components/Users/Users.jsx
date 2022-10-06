@@ -22,7 +22,8 @@ export const Users = () => {
 
   useEffect(() => {
     // Component did update :)
-    console.log("Message has changed I will trigger a re-render :)");
+    console.log("Message has changed I will re-execute myself :)");
+    // additional logic
   }, [message]);
 
   const handleSetMessage = (event) => {

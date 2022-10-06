@@ -39,14 +39,14 @@ export default class LifeCycleComponent extends React.Component {
     console.log("Next props: ", nextProps);
     console.log("Next state: ", nextState);
 
-    // if (nextState.message === "Hello class =)") {
-    //   return false; // since we return false we will force not-rerender of the component
-    // }
-
-    if (nextProps.products.length === 3) {
-      return false;
+    if (nextState.message === "Hello class =)") {
+      return true; // since we return false we will force not-rerender of the component
     }
-    return true;
+
+    // if (nextProps.products.length === 4) {
+    //   return false;
+    // }
+    return false;
   }
 
   componentDidUpdate(prevProps, prevState) {
